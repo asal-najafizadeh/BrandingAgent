@@ -1,4 +1,5 @@
-# Branding Bot
+# Branding Agent
+
 <p align="center">
   <img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build" />
   <img src="https://img.shields.io/badge/version-2.0.0-blue" alt="Version" />
@@ -7,14 +8,15 @@
   <img src="https://img.shields.io/badge/FastAPI-0.115%2B-009688?logo=fastapi&logoColor=white" alt="FastAPI" />
 </p>
 
-
 Session-based RAG chatbot with an LLM intent router. Ingest PDFs or raw text, then chat against that knowledge — locally, via Ollama.
+
+**Created and developed by [Asal Najafizadeh](https://github.com/Asal-Najafizadeh).**
 
 ---
 
 ## About The Project
 
-Generic chatbots either always hit a vector store (slow, noisy) or never do (no grounding). Branding Bot sits in between.
+Generic chatbots either always hit a vector store (slow, noisy) or never do (no grounding). Branding Agent sits in between.
 
 Each user gets an isolated **session** with its own FAISS index and conversation memory. An **intent router** classifies every message as `GREETING`, `KNOWLEDGE`, or `CHITCHAT`. Retrieval runs only when the question is actually about ingested content (products, prices, policies, uploaded documents). Small talk is answered without a FAISS lookup.
 
@@ -65,8 +67,8 @@ ollama pull nomic-embed-text
 ### Installation
 
 ```bash
-git clone https://github.com/<org>/Branding-Bot.git
-cd Branding-Bot
+git clone https://github.com/Asal-Najafizadeh/BrandingAgent.git
+cd BrandingAgent
 
 python -m venv .venv
 ```
@@ -182,21 +184,11 @@ Chat response shape:
 }
 ```
 
-### Demo / screenshots
-
-Add links or images here when available:
-
-```markdown
-![Chat UI](docs/screenshot-chat.png)
-```
-
-Live demo: _TBD_
-
 ---
 
 ## Contributing
 
-1. Fork the repo and create a branch (`feat/...` or `fix/...`).
+1. Fork the repository and create a branch (`feat/...` or `fix/...`).
 2. Keep changes focused; match existing Python style.
 3. Open a pull request with a short description of **why** the change exists.
 
@@ -204,10 +196,14 @@ Bug reports should include OS, Python version, Ollama model names, and the reque
 
 ---
 
+## Author
+
+**Asal Najafizadeh** — creator and developer of this project.
+
+---
+
 ## License
 
-Distributed under the **MIT** License. See [`LICENSE`](LICENSE) (add the license file if it is not yet in the repo).
+This project is licensed under the [MIT License](LICENSE).
 
-```
-Copyright (c) 2026 Branding Bot contributors
-```
+Copyright (c) 2026 Asal Najafizadeh
